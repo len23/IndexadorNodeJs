@@ -21,7 +21,7 @@ var options = {
     headers:{
       "Content-Type":"application/json"
     },
-    body:JSON.stringify(array)
+    body:JSON.stringify(arrayArtículos)
 }
 
 request(options, callback)
