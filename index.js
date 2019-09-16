@@ -71,7 +71,7 @@ function callbackPost(error, response, body) {
 
 var getArticlesIEEE = {
   
-  url: "http://ieee.rkbexplorer.com/sparql/?format=json&query="+"PREFIX+id%3A+++<http%3A%2F%2Fieee.rkbexplorer.com%2Fid%2F>%0D%0APREFIX+rdf%3A++<http%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23>%0D%0APREFIX+rdfs%3A+<http%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23>%0D%0APREFIX+akt%3A++<http%3A%2F%2Fwww.aktors.org%2Fontology%2Fportal%23>%0D%0APREFIX+owl%3A++<http%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23>%0D%0APREFIX+akt%3A++<http%3A%2F%2Fwww.aktors.org%2Fontology%2Fportal%23>%0D%0APREFIX+akts%3A+<http%3A%2F%2Fwww.aktors.org%2Fontology%2Fsupport%23>%0D%0APREFIX+iai%3A++<http%3A%2F%2Fwww.iai.uni-sb.de%2Fresist%23>%0D%0APREFIX+extn%3A+<http%3A%2F%2Fwww.aktors.org%2Fontology%2Fextension%23>%0D%0ASELECT+DISTINCT+%3Farticulo+%3Ftitulo+%3Fabstract+WHERE+{+%0D%0A++%3Farticulo+rdf%3Atype+akt%3AProceedings-Paper-Reference.%0D%0A++%3Farticulo+akt%3Ahas-title+%3Ftitulo.%0D%0A++%3Farticulo+rdf%3Atype+++akt%3AProceedings-Paper-Reference.%0D%0A++OPTIONAL+{%3Farticulo+extn%3Ahas-abstract+%3Fabstract}%0D%0A}LIMIT+1%0D%0A",
+  url: "https://bit.ly/2klzpll",
   method: "GET",
   headers:{
     "Content-Type":"application/json"
@@ -101,13 +101,13 @@ var getArticlesDBLP={
 
 request(getArticlesIEEE, callback);
 
-//setTimeout(() => {
+setTimeout(() => {
   //request(getArticlesACM, callback);
-//}, 30000);
+}, 30000);
 
-//setTimeout(() => {
-//request(getArticlesDBLP, callback);
-//}, 120000);
+setTimeout(() => {
+request(getArticlesDBLP, callback);
+}, 120000);
 
 
 
