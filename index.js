@@ -26,7 +26,7 @@ function callback(error, response, body) {
     }); 
     //console.log('Arrays: ',arrayArticulos[2602]);
       var options = {
-      url: "http://localhost:8080/JavaAPI/api/articulos/indexDBLP",
+      url: urlPost,
       method: "POST",
       headers:{
         "Content-Type":"application/json"
